@@ -1,327 +1,119 @@
-# Glassdoor Clone — White-Label Solution by Miracuves
+# Glassdoor Clone — White-Label Job Board & Recruitment Platform by Miracuves
 
 [![Live Demo](https://img.shields.io/badge/Live_Demo-Try_Now-e8344f?style=for-the-badge)](https://mxhire.mimeld.com)
-[![Solution Page](https://img.shields.io/badge/Solution_Page-miracuves.com-0b0b10?style=for-the-badge)](https://miracuves.com/glassdoor-clone/)
+[![Website](https://img.shields.io/badge/Solution_Page-miracuves.com-0b0b10?style=for-the-badge)](https://miracuves.com/glassdoor-clone/)
 [![Delivery](https://img.shields.io/badge/Go_Live-6_Working_Days-2ecc8f?style=for-the-badge)](https://miracuves.com/glassdoor-clone/#pricing)
 [![Support](https://img.shields.io/badge/Support-60_Days_+_12mo_Updates-blue?style=for-the-badge)](https://miracuves.com/facts/)
 
+**MXHire** is a production-ready, white-label Glassdoor clone: a complete job-board & recruitment platform with seeker, employer, and admin panels — delivered with **100% source code ownership** in **6 working days**.
+
+> 💼 **See it running before you talk to anyone.** Live seeker app, employer console, and admin dashboard — demo credentials are printed on the [solution page](https://miracuves.com/glassdoor-clone#demo). No sales call required.
+
 ---
 
-## Table of Contents
-
-1. [Who Is This For?](#who-is-this-for)
-2. [How It Works](#how-it-works)
-3. [Core Features](#core-features)
-4. [Architecture](#architecture)
-5. [Revenue Streams](#revenue-streams)
-6. [What's Included](#whats-included)
-7. [Deployment Timeline](#deployment-timeline)
-8. [Why Not Build From Scratch?](#why-not-build-from-scratch)
-9. [Market Opportunity](#market-opportunity)
-10. [Client Testimonials](#client-testimonials)
-11. [FAQ](#faq)
-12. [Resources](#resources)
-13. [About Miracuves](#about-miracuves)
-
-## Live Demos
+## 🚀 Live Demos
 
 | Environment | URL | What you can test |
 |---|---|---|
-| Web Platform | [mxhire.mimeld.com](https://mxhire.mimeld.com) | Full experience in the browser |
-| Admin Dashboard | [Solution page → Demo](https://miracuves.com/glassdoor-clone/#demo) | Users, content, plans, analytics |
+| 📱 Seeker App | [mas.mimeld.com](https://mas.mimeld.com) | Search jobs, alerts, apply, profile |
+| 🌐 Web Portal | [mxhire.mimeld.com](https://mxhire.mimeld.com) | Full job-board in browser |
+| 🏢 Employer Console | [Solution page → Demo](https://miracuves.com/glassdoor-clone#demo) | Post jobs, search candidates, ATS, analytics |
+| 🛠️ Admin Dashboard | [Solution page → Demo](https://miracuves.com/glassdoor-clone#demo) | Jobs, employers, candidates, analytics |
 
-Demo credentials: [miracuves.com/glassdoor-clone -> Demo section](https://miracuves.com/glassdoor-clone/#demo)
-
-## What Makes This Glassdoor Clone Different
-
-<!-- TODO: fill 3-5 vertical-specific differentiators -->
-
-## Who Is This For?
-
-| Buyer Type | Use Case |
-|---|---|
-| HR Tech Founders | Launch a company review platform |
-| Job Boards | Add company reviews to job listings |
-| Employer Branding Agencies | White-label employer review platform |
+Demo credentials for all environments: **[miracuves.com/glassdoor-clone → Demo section](https://miracuves.com/glassdoor-clone/#demo)**
 
 ---
 
-## How It Works
+## ✨ What Makes This Glassdoor Clone Different
 
-1. Employees submit anonymous company reviews
-2. Employers claim their company profile
-3. Job seekers read reviews and salary data
-4. Employers post jobs with branded company profile
-5. Platform matches job seekers with relevant openings
+Most job-board scripts stop at "list + apply." This platform ships with the features that actually run a recruiting *business*:
 
----
+- **AI Resume-Match Scoring** — matches job description to candidate resumes with explainable scores — what saves recruiters hours
+- **Built-In ATS Pipeline** — 
+- **Salary Insights** — drag-drop applicant pipeline, interview kits, scorecards — no extra SaaS needed for hiring teams
+- **Company Reviews** — helps candidates tailor cover letters per job — increases application volume
+- **AI Cover-Letter Writer** — employees rate companies, attach photos, respond — what Glassdoor turned into a $1.6B business
 
-## Core Features
+## 📦 Core Features
 
-### User/Job Seeker App
-- Profile creation
-- Job search
-- Skill assessments
-- Network building
-- Messaging
-- Salary insights
+**Job Seeker:** search jobs · filters · 1-tap apply · resume upload · alerts · profile · saved searches · interview scheduler
 
-### Employer Panel
-- Job posting
-- Candidate search
-- Employer branding
-- Analytics
+**Employer:** post jobs · search candidates · ATS pipeline · interview scheduler · reviews · analytics · job boosts
 
-### Admin Panel
-- User verification
-- Content moderation
-- Revenue analytics
-- Premium features
+**Admin:** employer verification · category management · commission engine · analytics reports
 
----
-
-## Advanced Features
-
-The platform integrates AI-powered features that reduce manual overhead and capture revenue opportunities:
-
-- **AI Review Moderation** - Automated review authenticity checking
-- **AI Job Matching** - Personalized job recommendations
-- **AI Skill Analysis** - Competency assessment & gaps
-- **AI Salary Insights** - Market compensation data
-
----
-
-## Apps and Web Panels
-
-| Module | Description |
-|---|---|
-| User App | Reviews, salaries, jobs |
-| Employer Panel | Profile, job posts, analytics |
-| Admin Panel | Moderation, employers, revenue |
-
----
-
-## Architecture
+## 🏗️ Architecture
 
 ```mermaid
 flowchart LR
-    A[Flutter Apps<br/>Android · iOS] --> G[REST API<br/>Laravel Backend]
-    W[Web Platform<br/>Responsive] --> G
-    P[Partner Panel] --> G
-    AD[Admin Dashboard] --> G
-    G --> DB[(MySQL)]
-    G --> S3[Object Storage]
+    A[Seeker App<br/>Flutter]
+    B[Web Portal<br/>Responsive]
+    W[Employer Console]
+    AD[Admin Dashboard]
+    A --> G[REST API<br/>Node.js]
+    B --> G
+    W --> G
+    AD --> G
+    G --> DB[(PostgreSQL)]
+    G --> ES[Elasticsearch<br/>Job Search]
+    ES --> A
+    ES --> B
+    G --> PAY[Stripe Connect]
 ```
 
-**Stack:**
+**Stack:** Flutter mobile apps · Node.js backend · Elasticsearch for job search · PostgreSQL · Stripe Connect for payouts · Stripe, regional gateways
 
-| Layer | Technology |
-|---|---|
-| Mobile | Flutter |
-| Web | React.js |
-| Backend | Node.js |
-| Database | MongoDB |
+## 📋 What’s Included
 
----
+- ✅ Full source code — backend, web, mobile apps, panels (no encryption, no license locks)
+- ✅ Deployment to your servers & app store submission assistance
+- ✅ Your branding — white-label rename, logo, colors, domain
+- ✅ 60 days post-launch support + 12 months of free updates
+- ✅ Documentation & handover
 
-## Revenue Streams
+**Pricing:** from **$2,899**, transparent on the [solution page](https://miracuves.com/glassdoor-clone/#pricing) — no "contact us for quote" games.
 
-The platform is engineered to generate revenue from day one through multiple complementary channels:
+## 🆚 Why Not Build From Scratch?
 
-- Job listing fees
-- Employer subscriptions
-- Featured company profiles
-- Premium subscriptions
-- Job posting fees
-- Recruiter tools
-- Advertising revenue
-- Sponsored content
+Custom job boards run $60k–$250k and 4–8 months. A proven white-label base gets you to market in 6 working days for a fraction of that, with your budget preserved for employer outreach and SEO of job pages.
 
----
+## 📚 Resources
 
-## Security and Compliance
+- 📖 [Glassdoor Clone — Full Solution Page](https://miracuves.com/glassdoor-clone) (features, pricing, demos, FAQ)
+- 💰 [How Much Does a Job Board App Cost in 2026?](https://miracuves.com/glassdoor-clone#pricing) pricing breakdown & what's included
+- 📝 [Best Glassdoor Clone Script in 2026](https://miracuves.com/glassdoor-clone/blog/) features, pricing & launch guide
+- 🧠 [SEO of Job Pages: The Underrated Job Board Moat](https://miracuves.com/glassdoor-clone/blog/) long-tail programatic SEO
+- ✅ [Miracuves Facts & Claims Ledger](https://miracuves.com/glassdoor-clone/facts/) every claim we make, verified
 
-- OTP-based authentication
-- SSL/TLS encrypted API communication
-- GDPR-ready data handling
+## 🏢 About Miracuves
+
+[Miracuves Solutions](https://miracuves.com) builds white-label clone apps and custom software from Mumbai, India — 90+ ready-made solutions, live demos for every product, transparent pricing, and delivery in 6 working days. Operating since 2010.
+
+**Talk to us:** [WhatsApp](https://wa.me/919830009649) · [Schedule a consultation](https://miracuves.com/schedule-consultation/) · [miracuves.com](https://miracuves.com)
 
 ---
 
-## What's Included
+### ⚠️ Note on This Repository
 
-| Plan | Price | What You Get |
-|---|---|---|
-| Standard | **$2,899** | Complete source code, all apps, admin panel, rebranding, 1 year updates |
-| Enterprise | Custom Quote | Everything in Standard + custom features, multi-region, priority support |
+This repository is a product overview. The full source code is delivered to clients on purchase — see [what’s included](https://miracuves.com/glassdoor-clone/#included). For a hands-on evaluation, use the live demos above; credentials are public on the solution page.
 
-**What is included:**
-
-- User App
-- Employer Panel
-- Admin Panel
-- Full Source Code
-- Complete Rebranding (your logo, colors, app name)
-- Server Deployment
-- App Store and Google Play Submission Support
-- 60 Days Free Bug Support
-- Free 1-Year Updates
+*Keywords: glassdoor clone, glassdoor clone script, job board, recruitment, white label Indeed, ATS, Flutter job app, Node.js job board*
 
 ---
-**Pricing:** from **$2,899** — transparent on the [solution page](https://miracuves.com/glassdoor-clone/#pricing).
-
-
-## Deployment Timeline
-
-| Day | Milestone |
-|---|---|
-| Day 1 | Server setup, environment configuration, initial deployment |
-| Day 2 | White-labeling - app name, logo, colors, splash screens |
-| Day 3 | Payment gateway integration + third-party API configuration |
-| Day 4 | Custom feature implementation (if applicable) |
-| Day 5 | QA, testing, bug fixes across all panels |
-| Day 6 | App Store + Google Play submission + Go-live |
-
-> **Average go-live: 6 business days from payment confirmation.**
-
----
-
-## Why Not Build From Scratch?
-
-| Factor | Build from Scratch | Miracuves Solution |
-|---|---|---|
-| Time to Launch | 6-12 months | 6 days |
-| Development Cost | $60,000-$150,000 | From $2,899 |
-| Source Code Ownership | Yes | Yes |
-| Customization | Full | Full |
-| Post-Launch Support | Depends on team | 60 days included |
-| Risk | High | Low |
-
----
-
-## Market Opportunity
-
-| Metric | Data |
-|---|---|
-| Recruitment Market (2030) | $500 billion |
-| Job Seekers Using Reviews | 80%+ |
-
-> Source: Statista, Grand View Research, Allied Market Research
-
----
-
-## Successful Verticals
-
-- Company review platforms
-- Salary transparency tools
-- Employer branding platforms
-- Professional networking
-- Job search
-- Company reviews
-- Freelance hiring
-- Executive search
-
----
-
-## Client Testimonials
-
-> *"Exceptional results from day one."*
-> - Verified Client
-
-> *"Scaled 3x faster than expected."*
-> - Startup Founder
-
----
-
-## FAQ
-
-**How much?**
-$2,899.
-
-**Are reviews anonymous?**
-Yes.
-
-**Job board included?**
-Yes.
-
-**Source code?**
-Yes.
-
-**Launch?**
-6 days.
-
----
-
-## Related Solutions
-
-Explore our other white-label clone solutions:
-
-- [LinkedIn Clone](https://github.com/Miracuves-Solutions/LinkedIn-Clone)
-- [Indeed Clone](https://github.com/Miracuves-Solutions/Indeed-Clone)
-
----
-
-## Resources
-
-- [Full Solution Page](https://miracuves.com/glassdoor-clone/) — features, pricing, demos, FAQ
-
-
-## Get Started
-
-**Ready to launch your company review platform?**
-
-| Channel | Link |
-|---|---|
-| Full Solution Page | [miracuves.com/glassdoor-clone](https://miracuves.com/glassdoor-clone/) |
-| Email | info@miracuves.com |
-| WhatsApp | [+91 98300 09649](https://wa.me/919830009649) |
-| Book a Call | [Free Consultation](https://miracuves.com/contact/) |
-
----
-
-## About Miracuves
-
-**Miracuves Solutions Pvt. Ltd.** is a Mumbai-based software company specializing in white-label clone app solutions across 12+ industries.
-
-- 90+ ready-to-deploy solutions
-- 6-day delivery guarantee
-- 60+ engineers on staff
-- 3,900+ apps delivered
-- Full source code ownership
-- Clients across 40+ countries including India and USA
-
-[Explore all 90+ solutions at miracuves.com](https://miracuves.com)
-
----
-
-## Disclaimer
-
-This product is independently developed by Miracuves. All product names, logos, and brands are property of their respective owners. Use of these names does not imply endorsement.
-
----
-
-<div align="center">
-
-*(c) 2026 Miracuves Solutions Pvt. Ltd. | Mumbai, India*
-*This repository contains product documentation only - no proprietary source code is published here.*
-
-</div>
-
-
-*Keywords: glassdoor clone, glassdoor script, white label solution, laravel flutter app, clone script*
-
-
-
----
-
-### Note on This Repository
-
-This repository is a product overview. The full source code is delivered to clients on purchase. For a hands-on evaluation, use the live demos above; credentials are public on the solution page.
-
 
 <!--
-=========================================================
-GENERATED FROM MIRACUVES NETFLIX-CLONE README TEMPLATE
-Canon: 6 working days, from $2,799 floor, 60 days support + 12 months updates.
-Never use 3 days. See https://miracuves.com/facts/ for audited claims.
-=========================================================
+══════════════════════════════════════════════════
+TEMPLATE VARIABLE KEY — auto-generated from Netflix-Clone pattern
+══════════════════════════════════════════════════
+{APP_NAME}        Glassdoor Clone
+{MX_NAME}         MXHire
+{CATEGORY}        Job Board & Recruitment Platform
+{DEMO_WEB}        mxhire.mimeld.com
+{PRICE}           $2,899
+{SLUG}            glassdoor-clone
+{SOLUTION_URL}    https://miracuves.com/glassdoor-clone/
+{VERTICAL}        job_freelance
+
+See /tmp/verticals/job_freelance.txt for the vertical config used to generate this README.
+══════════════════════════════════════════════════
 -->
